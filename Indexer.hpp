@@ -59,11 +59,11 @@ public:
         }
     }
 
-    std::vector<std::vector<int32_t>> search(const std::string& word) const {
+    std::vector<int32_t> search(const std::string& word) const {
         auto it = inverted_index.find(word);
 
         if (it == std::end(inverted_index)) {
-            return std::vector<std::vector<int32_t>>();
+            return std::vector<int32_t>();
         }
 
         return it->second;
